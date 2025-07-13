@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminal {
+  width: 90%;
+  max-width: 800px;
+  background-color: #000000;
+  border: 2px solid #00ff00;
+  padding: 20px;
+  box-shadow: 0 0 20px #00ff00;
+  height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.codebox {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.line {
+  margin-bottom: 8px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+
+.blinking-dots::after {
+  content: '';
+  display: inline-block;
+  width: 1ch;
+  animation: dots 1s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: '.'; }
+  25%  { content: '..'; }
+  50%  { content: '...'; }
+  75%  { content: ''; }
+  100% { content: '.'; }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+body {
+  animation: flicker 2s infinite;
+}
