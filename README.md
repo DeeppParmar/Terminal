@@ -61,6 +61,6 @@ It does **not perform any real hacking**. Use it responsibly for fun, pranks, or
 
 ## 🧑‍💻 Author
 
-Created by **[Your Name]**
+Created by **Deep**
 
 Feel free to fork, modify, and share this project!
